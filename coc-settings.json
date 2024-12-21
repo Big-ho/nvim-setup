@@ -1,0 +1,36 @@
+{
+  // clangd 설정 (C++ 개발을 위한 언어 서버 설정)
+  "clangd.path": "/usr/bin/clangd", // clangd의 경로 (필요에 따라 경로 지정)
+  "clangd.arguments": []
+
+  // prettier 설정 (자동 포매팅 옵션)
+  "prettier.printWidth": 100,
+  "prettier.tabWidth": 2,
+  "prettier.semi": true,
+  "prettier.singleQuote": true,
+  
+  // 저장 시 자동 포매팅 활성화
+  "coc.preferences.formatOnSaveFiletypes": [
+    "javascript", "typescript", "json", "css", "html", "scss", "markdown"
+  ],
+
+  // 파일 저장 시 자동 완성 항목 선택
+  "coc.preferences.autoSelect": "enabled",
+
+  // 자동 포매팅을 저장 시 활성화
+  "coc.preferences.formatOnSave": true,
+
+  // 코드 스니펫 지원 활성화
+  "coc.preferences.snippetSupport": true,
+
+  // 코드 완성 목록에서 스니펫을 먼저 표시하도록 설정
+  "coc.preferences.snippetPriority": 1,
+
+  // "always"로 설정하면, 자동 완성 메뉴가 항상 트리거됩니다.
+  "coc.preferences.autoTrigger": "always",
+  
+  // "always"로 설정하면, enter로 자동 완성 됩니다
+  "coc.preferences.acceptSuggestionOnEnter": "always"
+
+}
+
