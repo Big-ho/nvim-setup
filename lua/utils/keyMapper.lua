@@ -1,11 +1,11 @@
 local keyMapper = function(mode, from, to, opts)
-  local options = { noremap = true, silent = true }
-  opts = opts or {}
+  local options = vim.tbl_extend("keep", {noremap = true, silent = true}, opts or {})
 
-  -- Merge user-provided options with defaults
-  options = vim.tbl_extend("force", options, opts)
-
-  -- Set the keymap
+  if not mode or not from or not to then
+    vim.notify("Invalid keymap parameters!", vim.log.levels.ERROR)
+    return
+  end
+  
   vim.keymap.set(mode, from, to, options)
 end
 
