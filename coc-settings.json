@@ -1,6 +1,7 @@
 {
   "clangd.path": "/usr/bin/clangd",
-  "clangd.arguments": [],
+  "clangd.arguments": ["--background-index"],
   "clangd.fallbackFlags": ["-std=c++17"],
+  
   "coc.source.clangd.enable": true
 }
