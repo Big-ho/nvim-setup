@@ -1,4 +1,3 @@
--- ~/.config/nvim/lua/plugins.lua 또는 init.lua에 추가
 return {
   'lewis6991/gitsigns.nvim',
   config = function()
