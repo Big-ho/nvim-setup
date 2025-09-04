@@ -14,9 +14,10 @@ mapKey("n", "<C-l>", "<C-w>l") -- Right
 mapKey("i", "<C-Space>", "coc#refresh()", { expr = true })
 
 -- Confirm completion with Enter
-mapKey("i", "<CR>", 'coc#pum#visible() ? coc#pum#confirm() : "\\<CR>"', { expr = true })
+mapKey("i", "<CR>", [[coc#pum#visible() ? coc#pum#confirm() : "\<CR>"]], { expr = true, silent = true })
+
 
 -- Navigate completion menu
-mapKey("i", "<Tab>", 'coc#pum#visible() ? coc#pum#next(1) : "\\<Tab>"', { expr = true })
-mapKey("i", "<S-Tab>", 'coc#pum#visible() ? coc#pum#prev(1) : "\\<S-Tab>"', { expr = true })
+mapKey("i", "<Tab>", [[coc#pum#visible() ? coc#pum#next(1) : "\<Tab>"]], { expr = true, silent = true })
+mapKey("i", "<S-Tab>", [[coc#pum#visible() ? coc#pum#prev(1) : "\<S-Tab>"]], { expr = true, silent = true })
 

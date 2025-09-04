@@ -21,7 +21,7 @@ return {
 
       check_ts = false,                -- Treesitter 비활성화 (성능 상의 이유)
 
-      map_cr = true,                   -- Enter 키로 자동 줄바꿈 시 괄호 맞춤
+      map_cr = false,                   -- Enter 키로 자동 줄바꿈 시 괄호 맞춤
       map_bs = true,                   -- 백스페이스로 괄호 삭제
       map_c_h = false,                 -- Ctrl+h로 괄호 삭제 비활성화
       map_c_w = false                  -- Ctrl+w로 괄호 삭제 비활성화
