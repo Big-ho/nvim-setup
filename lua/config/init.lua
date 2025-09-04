@@ -18,7 +18,7 @@ require("config.globals")
 require("config.keymaps")
 require("config.options")
 require("config.autocommands")
-require("config.coc-config")
+require("config.coc_config")
 
 local plugins = "plugins"
 local opts = {}

@@ -2,6 +2,19 @@
   "clangd.path": "/usr/bin/clangd",
   "clangd.arguments": ["--background-index"],
   "clangd.fallbackFlags": ["-std=c++17"],
-  
-  "coc.source.clangd.enable": true
+
+  "coc.source.clangd.enable": true,
+
+  "languageserver": {
+    "cmake": {
+      "command": "cmake-language-server",
+      "filetypes": ["cmake"],
+      "rootPatterns": [
+        "build/"
+      ],
+      "initializationOptions": {
+        "buildDirectory": "build"
+      }
+    }
+  }
 }
