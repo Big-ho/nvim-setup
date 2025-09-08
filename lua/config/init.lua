@@ -13,13 +13,6 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
   end
 end
 vim.opt.rtp:prepend(lazypath)
-vim.api.nvim_create_autocmd("CursorMovedI", {
-  pattern = "*",
-  callback = function()
-    print("coc#pum#visible() = " .. vim.fn["coc#pum#visible"]())
-  end,
-})
-
 
 require("config.globals")
 require("config.keymaps")
