@@ -1,24 +1,30 @@
 return {
   "NeogitOrg/neogit",
   dependencies = {
-    "nvim-lua/plenary.nvim",         -- required
-    "sindrets/diffview.nvim",        -- optional - Diff integration
-
-    -- Only one of these is needed.
-    -- "nvim-telescope/telescope.nvim", -- optional
-    "ibhagwan/fzf-lua",              -- optional
-    "echasnovski/mini.pick",         -- optional
+    "nvim-lua/plenary.nvim",       -- 필수
+    "sindrets/diffview.nvim",      -- 선택적, Diffview 통합
+    "ibhagwan/fzf-lua",            -- 선택적
+    "echasnovski/mini.pick",       -- 선택적
   },
   config = function()
+    -- Diffview 설정
+    require("diffview").setup({
+      view = {
+        default = {
+          layout = "diff2_vertical"
+        },
+      },
+    })
+
+    -- Neogit 설정
     require("neogit").setup({
-     kind = "split", -- opens neogit in a split 
-     signs = {
-      -- { CLOSED, OPENED }
-      section = { "", "" },
-      item = { "", "" },
-      hunk = { "", "" },
-     },
-     integrations = { diffview = true }, -- adds integration with diffview.nvim
+      kind = "split",  -- split 창으로 열기
+      signs = {
+        section = { "", "" },
+        item = { "", "" },
+        hunk = { "", "" },
+      },
+      integrations = { diffview = true },
     })
   end,
 }

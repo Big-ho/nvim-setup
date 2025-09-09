@@ -14,13 +14,8 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require("config.globals")
-require("config.keymaps")
-require("config.options")
-require("config.autocommands")
-require("config.coc_config")
-
-local plugins = "plugins"
-local opts = {}
-
-require("lazy").setup(plugins, opts)
+require("core.options")
+require("core.autocommands")
+require("core.globals")
+require("core.lazy")
+require("core.keymaps")

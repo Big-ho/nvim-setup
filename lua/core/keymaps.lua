@@ -11,13 +11,13 @@ mapKey("n", "<C-l>", "<C-w>l") -- Right
 
 -- CoC.nvim keymaps
 -- Trigger completion manually
-mapKey("i", "<C-Space>", "coc#refresh()", { expr = true })
+-- mapKey("i", "<C-Space>", "coc#refresh()", { expr = true })
 
 -- Confirm completion with Enter
-mapKey("i", "<CR>", [[coc#pum#visible() ? coc#pum#confirm() : "\<CR>"]], { expr = true, silent = true })
+-- mapKey("i", "<CR>", [[coc#pum#visible() ? coc#pum#confirm() : "\<CR>"]], { expr = true, silent = true })
 
 
 -- Navigate completion menu
-mapKey("i", "<Tab>", [[coc#pum#visible() ? coc#pum#next(1) : "\<Tab>"]], { expr = true, silent = true })
-mapKey("i", "<S-Tab>", [[coc#pum#visible() ? coc#pum#prev(1) : "\<S-Tab>"]], { expr = true, silent = true })
+-- mapKey("i", "<Tab>", [[coc#pum#visible() ? coc#pum#next(1) : "\<Tab>"]], { expr = true, silent = true })
+-- mapKey("i", "<S-Tab>", [[coc#pum#visible() ? coc#pum#prev(1) : "\<S-Tab>"]], { expr = true, silent = true })
 

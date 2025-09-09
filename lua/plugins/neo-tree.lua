@@ -3,8 +3,14 @@ return {
     branch = "v3.x",
     dependencies = {
       "nvim-lua/plenary.nvim",
-      "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+      "nvim-tree/nvim-web-devicons",
       "MunifTanjim/nui.nvim",
-      -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
-    }
+    },
+    lazy = false, -- 즉시 로드하려면 false
+    config = function()
+      require("neo-tree").setup({
+        -- 옵션 추가 가능
+      })
+    end,
 }
+
